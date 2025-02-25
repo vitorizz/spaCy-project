@@ -34,7 +34,6 @@ responses = {
     "default": "I'm sorry, I didn't understand that. Could you rephrase?"
 }
 
-# Map response keys to lists of keywords
 keywords_map = {
     "greet": ["hi", "hello", "hey", "greetings", "sup"],
     "bye": ["bye", "goodbye", "farewell", "see you"],
