@@ -29,5 +29,5 @@ pip install -r requirements.txt
 ## Run the chatbot with:
 python chatbot.py
 
-# Students
+## Students
 Vito Rizzuto 40246408
