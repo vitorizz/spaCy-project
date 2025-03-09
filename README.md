@@ -31,4 +31,5 @@ python chatbot.py
 
 ## Students
 Vito Rizzuto 40246408
+
 Miroslav Miskovski 40249269
