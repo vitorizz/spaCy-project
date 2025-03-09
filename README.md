@@ -1,6 +1,3 @@
-Vito Rizzuto 40246408
-
-
 # Rule-Based Chatbot with NLP Integration
 
 This project is a simple rule-based chatbot built using Python and spaCy. It demonstrates basic natural language processing and keyword-based response mapping for Java programming concepts.
@@ -32,4 +29,5 @@ pip install -r requirements.txt
 ## Run the chatbot with:
 python chatbot.py
 
-
+# Students
+Vito Rizzuto 40246408
