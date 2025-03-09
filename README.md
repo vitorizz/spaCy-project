@@ -33,3 +33,5 @@ python chatbot.py
 Vito Rizzuto 40246408
 
 Miroslav Miskovski 40249269
+
+Kateryna Sizova 40212437
