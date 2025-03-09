@@ -120,9 +120,9 @@ def count_keywords(user_input):
     # Count occurrences using regex for full phrase matches
     for key, words in keywords_map.items():
         for word in words:
-            # \b ensures whole-word matching
+            weight = 2 if " " in word else 1  # Extra weight if the keyword is a phrase
             if re.search(r'\b' + re.escape(word) + r'\b', user_input):
-                counts[key] += 1
+                counts[key] += weight
 
     # Count occurrences using spaCy token lemmatization
     doc = nlp(user_input)
@@ -144,13 +144,20 @@ def earliest_occurrence(key, user_input):
     return min(indices) if indices else len(user_input)
 
 def choose_best_keyword(user_input):
-    """Selects the best matching keyword based on count and earliest occurrence."""
+    """Selects the best matching keyword based on count, whether it's multi-word, and earliest occurrence."""
     counts = count_keywords(user_input)
     if not counts:
         return "default"
-    # Sort candidates by highest count and then by earliest occurrence
-    best_key = sorted(counts.items(), key=lambda item: (-item[1], earliest_occurrence(item[0], user_input)))[0][0]
+
+    def sort_key(item):
+        key, count = item
+        # is_multi is 1 for multi-word keys, 0 otherwise
+        is_multi = 1 if " " in key else 0
+        return (-count, -is_multi, earliest_occurrence(key, user_input))
+    
+    best_key = sorted(counts.items(), key=sort_key)[0][0]
     return best_key
+
 
 def get_response(user_input):
     user_input = user_input.lower()

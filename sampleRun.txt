@@ -1,0 +1,119 @@
+Chatbot: Hello! How can I help you today? Type 'bye', 'exit', or 'quit' to end the session.
+You: Hey there!
+Chatbot: Hello! How can I help you today?
+
+You: I need help with Java programming.
+Chatbot: I can answer your questions about Java programming concepts. Try asking about control structures, loops, OOP principles, exceptions, or arrays.
+
+You: Can you show me an if statement?
+Chatbot: In Java, an `if` statement is used for decision-making. It executes a block of code if the condition is `true`.
+         ```java
+         if (x > 0) {
+             System.out.println("Positive number");
+         }
+         ```
+
+You: And what about else if?
+Chatbot: The `else if` statement allows checking multiple conditions in sequence.
+         ```java
+         if (x > 0) {
+             System.out.println("Positive");
+         } else if (x == 0) {
+             System.out.println("Zero");
+         } else {
+             System.out.println("Negative");
+         }
+         ```
+
+You: How can I write a for loop?
+Chatbot: A `for` loop in Java is used for repeated execution based on a counter.
+         ```java
+         for (int i = 0; i < 5; i++) {
+             System.out.println("Iteration: " + i);
+         }
+         ```
+
+You: What about a while loop?
+Chatbot: A `while` loop executes a block of code **as long as** a condition remains `true`.
+         ```java
+         int i = 0;
+         while (i < 5) {
+             System.out.println("Iteration: " + i);
+             i++;
+         }
+         ```
+
+You: Can you give me an example of a do-while loop?
+Chatbot: A `do-while` loop executes the block **at least once**, then checks the condition.
+         ```java
+         do {
+             System.out.println("Executed at least once!");
+         } while (false);
+         ```
+
+You: How can I use a switch statement?
+Chatbot: A `switch` statement selects a block of code based on a variable’s value.
+         ```java
+         int day = 3;
+         switch (day) {
+             case 1:
+                 System.out.println("Monday");
+                 break;
+             case 2:
+                 System.out.println("Tuesday");
+                 break;
+             default:
+                 System.out.println("Another day");
+         }
+         ```
+
+You: Explain inheritance to me.
+Chatbot: **Inheritance** allows a class to inherit methods and attributes from another class.
+         ```java
+         class Animal {
+             void makeSound() {
+                 System.out.println("Animal makes a sound");
+             }
+         }
+         class Dog extends Animal {
+             void bark() {
+                 System.out.println("Dog barks");
+             }
+         }
+         ```
+
+You: And what about polymorphism?
+Chatbot: **Polymorphism** allows a method to behave differently based on the object that calls it.
+         ```java
+         class Animal {
+             void makeSound() {
+                 System.out.println("Animal sound");
+             }
+         }
+         class Dog extends Animal {
+             void makeSound() {
+                 System.out.println("Dog barks");
+             }
+         }
+         ```
+
+You: Tell me about encapsulation.
+Chatbot: **Encapsulation** restricts direct access to fields and methods in a class.
+         ```java
+         class Person {
+             private String name;
+             public void setName(String name) {
+                 this.name = name;
+             }
+         }
+         ```
+
+You: How are lambda expressions and how do they work in Java?
+Chatbot: Lambda expressions allow you to write anonymous functions in Java with a concise syntax.
+         ```java
+         List<Integer> list = Arrays.asList(1, 2, 3, 4);
+         list.forEach(n -> System.out.println(n));
+         ```
+
+You: That's all for now, goodbye!
+Chatbot: Goodbye! Have a great day!
