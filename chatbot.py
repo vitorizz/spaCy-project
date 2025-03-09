@@ -1,4 +1,5 @@
 import spacy
+import re
 
 nlp = spacy.load("en_core_web_sm")
 
@@ -100,7 +101,7 @@ def get_response(user_input):
     # Prioritize multi-word matches first (like "else if")
     for key in sorted(keywords_map.keys(), key=lambda k: -len(k)):  # Sort keys by length (longest first)
         for word in keywords_map[key]:
-            if word in user_input:
+            if re.search(r'\b' + re.escape(word) + r'\b', user_input):
                 return responses[key]
 
     # If no full phrase is found, check individual words
