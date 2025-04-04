@@ -11,8 +11,8 @@ This project is a simple rule-based chatbot built using Python and spaCy. It dem
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/vitorizz/spaCy-project.git
+   cd spaCy-project
 
 ## Create and Activate a Virtual Environment:
    python -m venv venv
